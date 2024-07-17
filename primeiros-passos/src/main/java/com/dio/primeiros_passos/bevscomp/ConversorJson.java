@@ -1,6 +1,7 @@
 package com.dio.primeiros_passos.bevscomp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import com.google.gson.Gson;
@@ -15,5 +16,8 @@ public class ConversorJson {
     }
 
     // mas e o @Component no Gson, já que é externo?
-    
+    @Bean // agora pose ser injetado em qualquer parte da aplicação
+    public Gson gson(){
+        return new Gson();
+    }
 }
