@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SistemaMensagem {
+    /* tenho dois remetentes */ 
+    /* mas como singleton */
+    /* as variáveis estão apontando para mesma referência */
     @Autowired
     private Remetente noreply;
     @Autowired
