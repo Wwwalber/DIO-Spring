@@ -14,13 +14,13 @@ public class SistemaMensagem {
     private Remetente techTeam;
 
     public void enviarConfirmacaoCadastro(){
-        System.out.println(noreply);
+        System.out.println(noreply); // aqui é injetado que o remetente é o noreply
         System.out.println("Seu cadastro foi aprovado");
     }
 
     public void enviarMensagemBoasVindas(){
         techTeam.setEmail("tech@dio.com.br");
-        System.out.println(techTeam);
+        System.out.println(techTeam);// aqui é injetado que o remetente é o techTeam
         System.out.println("Bem-vindo à Tech Elite");
     }
 }
