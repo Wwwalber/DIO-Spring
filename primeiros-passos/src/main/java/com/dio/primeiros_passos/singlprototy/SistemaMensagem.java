@@ -1,7 +1,9 @@
 package com.dio.primeiros_passos.singlprototy;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SistemaMensagem {
     @Autowired
     private Remetente noreply;
