@@ -20,7 +20,10 @@ public class SistemaMensagem {
 
     public void enviarMensagemBoasVindas(){
         techTeam.setEmail("tech@dio.com.br");
-        System.out.println(techTeam);// aqui é injetado que o remetente é o techTeam
+        System.out.println(techTeam);// aqui é injetado que o remetente é o techTeam.
+                    /* por ser nesse caso usado como singleton, vai ser usada a mesma 
+                    referência . noreply e techTeam  vão usar a mesma referência 
+                    a não ser que eu mude no beans para prototype */
         System.out.println("Bem-vindo à Tech Elite");
     }
 }
