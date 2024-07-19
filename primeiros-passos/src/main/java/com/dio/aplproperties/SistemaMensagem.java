@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SistemaMensagem implements CommandLineRunner{
     // por expresssion
-    @Value("${nome}")
+    @Value("${nome:NoReply}") // se não achar nome -> NoReply
     private String nome;
     @Value("${email}")
     private String email;
