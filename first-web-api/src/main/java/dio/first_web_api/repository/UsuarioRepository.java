@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import dio.first_web_api.model.Usuario;
 
 @Repository // essa classe é um componente
-public class UserRepository {
+public class UsuarioRepository {
     public void save(Usuario usuario){
         if (usuario.getId()==null){
             System.out.println("SAVE - Recebendo o usuário na camada de repositório");
