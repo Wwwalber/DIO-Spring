@@ -10,8 +10,15 @@ import dio.first_web_api.model.Usuario;
 @Repository // essa classe é um componente
 public class UsuarioRepository {
     public void save(Usuario usuario){
+        if(usuario.getLogin()==null)
+                        // exceção específica
+            //throw new BusinessException("O campo de login é obrigatório!");
+                        // exceção genárica
+            throw new RuntimeException("O campo de login é obrigatório!");
+            
+
         if (usuario.getId()==null){
-            System.out.println("SAVE - Recebendo o usuário na camada de repositório");
+        System.out.println("SAVE - Recebendo o usuário na camada de repositório");
         } else {
             System.out.println("UPDATE - Recebendo o usuário na camada de repositório");
         }

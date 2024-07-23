@@ -45,12 +45,12 @@ public class SwaggerConfig {
 
         docket
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("dio.springbootweb.controller"))
+                .apis(RequestHandlerSelectors.basePackage("dio.first_web_api.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(this.informacoesApi().build())
-                .consumes(new HashSet<String>(Arrays.asList("application/json")))
-                .produces(new HashSet<String>(Arrays.asList("application/json")));
+                .consumes(new HashSet<>(Arrays.asList("application/json")))//consumir
+                .produces(new HashSet<>(Arrays.asList("application/json"))); //produzir
 
         return docket;
     }
