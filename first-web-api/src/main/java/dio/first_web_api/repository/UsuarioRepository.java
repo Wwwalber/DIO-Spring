@@ -12,11 +12,11 @@ import dio.first_web_api.model.Usuario;
 public class UsuarioRepository {
     public void save(Usuario usuario){
         if(usuario.getLogin()==null)
-                        // exceção específica
-            //throw new BusinessException("O campo de login é obrigatório!");
-                        // exceção genárica
             throw new CampoObrigatorioException("login");
-
+            
+        if(usuario.getPassword()==null)
+            throw new CampoObrigatorioException("password");
+        
         if (usuario.getId()==null){
         System.out.println("SAVE - Recebendo o usuário na camada de repositório");
         } else {
