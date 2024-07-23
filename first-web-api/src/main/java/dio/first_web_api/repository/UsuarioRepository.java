@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import dio.first_web_api.handler.CampoObrigatorioException;
 import dio.first_web_api.model.Usuario;
 
 @Repository // essa classe é um componente
@@ -14,8 +15,7 @@ public class UsuarioRepository {
                         // exceção específica
             //throw new BusinessException("O campo de login é obrigatório!");
                         // exceção genárica
-            throw new RuntimeException("O campo de login é obrigatório!");
-            
+            throw new CampoObrigatorioException("login");
 
         if (usuario.getId()==null){
         System.out.println("SAVE - Recebendo o usuário na camada de repositório");
