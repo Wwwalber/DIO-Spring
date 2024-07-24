@@ -1,8 +1,9 @@
 package dio.security_jwt.model;
 
-import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tab_user")
