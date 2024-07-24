@@ -1,4 +1,4 @@
-package dio.demo_spring_security;
+package dio.demo_spring_security.config;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
-
-import dio.demo_spring_security.config.SecurityDatabaseService;
 
 
 @Configuration
